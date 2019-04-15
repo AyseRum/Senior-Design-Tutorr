@@ -1,0 +1,17 @@
+#signuptxt {
+    color: #d65341;
+}
+.form-group{
+    color: #d65341;
+}
+.backToLogin {
+    color: #d65341;
+}
+html,body{
+    background-image: url('../img/04.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+
+    }
