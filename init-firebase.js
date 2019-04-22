@@ -9,4 +9,10 @@ var firebaseConfig = {
   };
   
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+//   firebase.initializeApp(firebaseConfig);
+
+  var defaultProject = firebase.initializeApp(firebaseConfig);
+var defaultStorage = defaultProject.storage();
+var defaultDatabase = defaultProject.database();
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
