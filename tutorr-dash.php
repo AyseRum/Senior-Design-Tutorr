@@ -1,6 +1,8 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +34,11 @@
                         </form>
                         <ul class="nav pull-right">
                             
-                            <li><a href="mailto:bgonzales@tutorr.com">Bobby Gonzales </a></li>
+                            <li>
+                                <?php
+                                   echo $_SESSION['currentuser'];  
+                                ?>
+                            </li>
                             <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="images/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
@@ -41,7 +47,7 @@
                                     <li><a href="#">Edit Profile</a></li>
                                     <li><a href="#">Account Settings</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Logout</a></li>
+                                    <li><a href="logout.php">Logout</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -67,9 +73,11 @@
                                     !</b> </a></li>
                             </ul>
                             <!--/.widget-nav-->
-                             <ul class="widget widget-menu unstyled">
+                            
+                            
+                            <!-- <ul class="widget widget-menu unstyled">
                                 <li><a href="form.html"><i class="menu-icon icon-paste"></i>Forms </a></li>
-                            </ul> 
+                            </ul> -->
                             <!--/.widget-nav-->
                             <ul class="widget widget-menu unstyled">
                                 <li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-cog">
@@ -81,7 +89,7 @@
                                         
                                     </ul>
                                 </li>
-                                <li><a href="#"><i class="menu-icon icon-signout"></i>Logout </a></li>
+                                <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                             </ul>
                         </div>
                         <!--/.sidebar-->
@@ -100,19 +108,19 @@
                                     </a>
                                   
                                 </div>
-                                <!-- <div class="btn-box-row row-fluid"> -->
-                                    <!-- <div class="span8"> -->
-                                        <!-- <div class="row-fluid"> -->
-                                            <!-- <div class="span12"> -->
-                                                <!-- <a href="#" class="btn-box small span4"><i class="icon-envelope"></i><b>Messages</b> -->
-                                                <!-- </a><a href="other-user-listing.html" class="btn-box small span4"><i class="icon-group"></i><b>Tutorrees</b> -->
-                                                <!-- </a> -->
-                                                <!-- <a href="mailto:bgonzales@tutorr.com" class="btn-box small span4"><i class="icon-exchange"></i><b>Communication</b> -->
-                                                <!-- </a> -->
-                                            <!-- </div> -->
-                                        <!-- </div>  -->
-                                          <!-- <div class="row-fluid"> 
-                                            <div class="span12"> 
+                                <div class="btn-box-row row-fluid">  
+                                    <div class="span8"> 
+                                         <div class="row-fluid"> 
+                                         <div class="span12"> 
+                                                <a href="#" class="btn-box small span4"><i class="icon-envelope"></i><b>Messages</b> 
+                                                </a><a href="other-user-listing.html" class="btn-box small span4"><i class="icon-group"></i><b>Tutorrees</b> 
+                                                 </a> 
+                                                 <a href="mailto:bgonzales@tutorr.com" class="btn-box small span4"><i class="icon-exchange"></i><b>Communication</b> 
+                                                 </a> 
+                                            </div> 
+                                        </div> 
+                                        <div class="row-fluid">
+                                            <div class="span12">
                                                 <div class="divTable">
                                                     <div class="divTableHeading">
                                                     <div class="divTableRow">
@@ -158,8 +166,8 @@
                                                     </div>
                                             </div>
                                         </div>
-                                    </div> --> 
-                                    <!-- <ul class="widget widget-usage unstyled span4">
+                                    </div>
+                                    <ul class="widget widget-usage unstyled span4">
                                         <li><p>Topics</p>
                                             <p>
                                                 <strong>Python</strong> <span class="pull-right small muted">78%</span>
@@ -196,7 +204,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                    </ul> -->
+                                    </ul>
                                 </div>
                             </div>
                            
@@ -214,3 +222,4 @@
         <script src="scripts/common.js" type="text/javascript"></script>
       
     </body>
+</html>
